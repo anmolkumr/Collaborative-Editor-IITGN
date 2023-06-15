@@ -1,6 +1,6 @@
 # IITGN Collaborative Editor
 
-A Collaborative Editor using Firebase and Ace Editor
+A Collaborative Editor with realtime Chat using Socket.io, Firebase and Ace Editor
 
 ![image](https://github.com/anmolkumr/metis-task-editor/assets/77740197/4956a31d-6043-4f92-b850-0b49decff9c8)
 Figure: Editor UI with Live Chat
