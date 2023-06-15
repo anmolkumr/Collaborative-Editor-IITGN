@@ -41,7 +41,7 @@ Your app is ready to be deployed!
 
 ## The Chat is Hosted on a separate Backend
 
-You can visit Chat website at [Colab-Chat-App](https://facebook.github.io/create-react-app/docs/getting-started "http://localhost:5000").
+You can visit Chat website at [Colab-Chat-App](http://localhost:5000).
 
 The Chat is supported by using Socket.io
 
