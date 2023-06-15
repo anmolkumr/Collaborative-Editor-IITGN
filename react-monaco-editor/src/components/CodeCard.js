@@ -20,32 +20,32 @@ export default function CodeCard() {
             <MDBContainer breakpoint='md'>
                 <MDBCard className='bg-light'>
 
-            <MDBCardHeader>Featured</MDBCardHeader>
+            <MDBCardHeader>Language: JS</MDBCardHeader>
             <MDBCardBody>
-                <MDBCardTitle>Special title treatment</MDBCardTitle>
-                <MDBCardText>With supporting text below as a natural lead-in to additional content.</MDBCardText>
-                <MDBBtn href='#'>Go somewhere</MDBBtn>
+                <MDBCardTitle>A Code Sample</MDBCardTitle>
+                <MDBCardText>Open to see</MDBCardText>
+                        <MDBBtn href='http://localhost:3000/code-editor/#-NXvDDK3Syb9AA06sDfH'>Edit This</MDBBtn>
             </MDBCardBody>
         </MDBCard>
         <br />
         <MDBCard>
             <MDBCardHeader>Featured</MDBCardHeader>
             <MDBCardBody>
-                <MDBCardTitle>Special title treatment</MDBCardTitle>
-                <MDBCardText>With supporting text below as a natural lead-in to additional content.</MDBCardText>
-                        <MDBBtn href='http://localhost:3000/code-editor/#-NXvDDK3Syb9AA06sDfH'>Go somewhere</MDBBtn>
+                <MDBCardTitle>Sample Code</MDBCardTitle>
+                <MDBCardText>Edit with Editor</MDBCardText>
+                        <MDBBtn href='http://localhost:3000/code-editor/#-NXvDDK3Syb9AA06sDfH'>Edit This</MDBBtn>
             </MDBCardBody>
         </MDBCard>
         <br />
-        <MDBCard>
-            <MDBCardHeader>Featured</MDBCardHeader>
-            <MDBCardBody>
-                <MDBCardTitle>Special title treatment</MDBCardTitle>
-                <MDBCardText>With supporting text below as a natural lead-in to additional content.</MDBCardText>
-                <MDBBtn href='#'>Go somewhere</MDBBtn>
-            </MDBCardBody>
-        </MDBCard>
+                <MDBCard>
+                    <MDBCardBody>
+                        <MDBCardTitle>Create new Colab Pad</MDBCardTitle>
+                        <MDBBtn href='http://localhost:3000/code-editor'>Create</MDBBtn>
+                    </MDBCardBody>
+                </MDBCard>
             </MDBContainer>
+            <br /><br />
+            <div className='text-center'>Made with ♥️ by Anmol</div>
         </>
 
     );

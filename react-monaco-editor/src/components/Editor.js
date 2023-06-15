@@ -4,8 +4,8 @@ import './Editor.css';
 
 class Editor extends Component {
     componentDidMount() {
-        //// Initialize Firebase.
-        //// TODO: replace with your Firebase project configuration.
+        // Initialize Firebase.
+
         var config = {
             apiKey: "AIzaSyBLFU3Z6HNzSTB4tjigR-IDMfBw2REWd40",
             authDomain: "colab-monaco.firebaseapp.com",
@@ -31,11 +31,11 @@ class Editor extends Component {
         session.setUseWorker(false);
         session.setMode("ace/mode/javascript");
 
-        //// Create Firepad.
+        // Creating Firepad connection
         var firepad = window.Firepad.fromACE(firepadRef, editor, {
             defaultText: '',
         });
-        //Initalize app
+        //Initalize
         firepad.on('ready', function () {
             if (firepad.isHistoryEmpty()) {
                 firepad.setHtml('<span style="font-size: 24px;">Rich-text editing with <span style="color: red">Firepad!</span></span><br/><br/>Collaborative-editing made easy.\n');
@@ -44,7 +44,7 @@ class Editor extends Component {
        
     }
 
-    // Helper to get hash from end of URL or generate a random one.
+   
     getExampleRef() {
         var ref = window.firebase.database().ref();
         var hash = window.location.hash.replace(/#/g, '');
@@ -63,6 +63,7 @@ class Editor extends Component {
     render() {
         return (
             <div>
+                <div style={{textAlign:'Center'}}>Share the Url to Collaborate!!</div>
                 <div id="firepad-container"></div>
             </div>
 

@@ -9,7 +9,7 @@ export default function Head() {
         <h1 className='mb-3'>Welcome to Collaborative - Editor</h1>
         <h4 className='mb-3'># IITGN's Colab Platform</h4>
         <a className='btn btn-primary' href='' role='button'>
-          Sign In to Continue
+          # A Metis Initiative
         </a>
       </div>
     </header >
