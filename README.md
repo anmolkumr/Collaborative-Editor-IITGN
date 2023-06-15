@@ -9,10 +9,15 @@ Figure: Editor UI with Live Chat
 
 This is a metis Project
 
-## Available Scripts
+### How to...
 
 In the `react-monaco-editor` project directory, you can run:
 
+1.  Clone this Repo
+2.  `cd react-monaco-editor`
+3.  Run `yarn add`  to get all packages
+4.  Run `yarn start`
+5.  App starts Running at `http://localhost:3000`
 ### `yarn start`
 
 Runs the app in the development mode.
