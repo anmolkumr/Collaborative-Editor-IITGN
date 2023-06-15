@@ -2,7 +2,9 @@
 # IITGN Collaborative Editor
 A Collaborative Editor using Firebase and Ace Editor
 
-This is a metis Project.
+https://github.com/anmolkumr/metis-task-editor/assets/77740197/1fb3bf64-623d-4196-9a3e-a4cbae0455a1
+This is a metis Project
+
 ## Available Scripts
 
 In the ### `react-monacto-editor` project directory, you can run:
