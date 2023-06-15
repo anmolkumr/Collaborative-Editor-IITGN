@@ -1,0 +1,12 @@
+#firepad-container {
+    width: 900px;
+    height: 1000px;
+    margin: left
+}
+.firepad{
+    width: 65%;
+}
+.powered-by-firepad {
+    display: none;
+}
+
