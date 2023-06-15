@@ -1,0 +1,19 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My Node.js application",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.4.1",
+    "socket.io-router": "^0.3.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

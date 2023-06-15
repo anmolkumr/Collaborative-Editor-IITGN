@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real-time Chat App</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da9e582e30.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        form {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            padding: 0.25rem;
+        }
+
+        form input {
+            border: 0;
+            padding: 0.7rem;
+            width: 100%;
+            outline: 0;
+            margin-right: 0.7rem;
+            border-radius: 20px;;
+            background: #ccc;
+        }
+
+        form button {
+            width: 6rem;
+            background-color: #003f8c;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            
+        }
+
+        form button:hover {
+            background-color: #01566d;
+        }
+
+        .messages {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .messages li {
+            padding: 0.5rem;
+        }
+
+        .messages li:nth-child(odd) {
+            background: #eee;
+            border-radius: 12px;
+        }
+        
+    </style>
+</head>
+
+<body>
+  
+    <ul class="messages"></ul>
+    <form>
+        <input type="text" class="input" autocomplete="off" autofocus />
+        <button><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+    <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector(".input");
+        const messages = document.querySelector(".messages");
+        const username = prompt("Please enter a nickname: ", "");
+        const socket = io();
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            addMessage(username + ": " + input.value);
+
+            socket.emit("chat_message", {
+                message: input.value
+            });
+
+            input.value = "";
+            return false;
+        }, false);
+
+        socket.on("chat_message", function (data) {
+            addMessage(data.username + ": " + data.message);
+        });
+
+        socket.on("user_join", function (data) {
+            addMessage("🔵"+ data + " just joined the chat!");
+        });
+
+        socket.on("user_leave", function (data) {
+            addMessage("🔴" + data + " has left the chat.");
+        });
+
+        addMessage("You have joined the chat as '" + username + "'.");
+        socket.emit("user_join", username);
+
+        function addMessage(message) {
+            const li = document.createElement("li");
+            li.innerHTML = message;
+            messages.appendChild(li);
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+
+</html>
