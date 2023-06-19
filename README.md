@@ -23,8 +23,12 @@ In the `react-monaco-editor` project directory, you can run:
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+### Features 
+1. Collaborative Code Editor based on Ace
+2. User Highlighting with different Colour
+3. Real-time sync to all coders online at that reference URL
+4. A complementary Chat UI to talk and share ideas with fellow coders.
+5. Can accommodate at max. 70 coders at a time(Due to Firebase free Plan).
 
 ### `yarn test`
 
