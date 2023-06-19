@@ -18,17 +18,19 @@ In the `react-monaco-editor` project directory, you can run:
 3.  Run `yarn add`  to get all packages
 4.  Run `yarn start`
 5.  App starts Running at `http://localhost:3000`
-### `yarn start`
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
 
-### Features 
+## Features 
 1. Collaborative Code Editor based on Ace
 2. User Highlighting with different Colour
 3. Real-time sync to all coders online at that reference URL
 4. A complementary Chat UI to talk and share ideas with fellow coders.
 5. Can accommodate at max. 70 coders at a time(Due to Firebase free Plan).
+
+### `yarn start`
+
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
 ### `yarn test`
 
